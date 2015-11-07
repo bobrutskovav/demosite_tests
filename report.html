@@ -1,0 +1,427 @@
+<html>
+<head><style type='text/css'>
+body, table {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 12;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title {
+    font-style: italic;
+}
+
+.selected {
+    background-color: #ffffcc;
+}
+
+.status_done {
+    background-color: #eeffee;
+}
+
+.status_passed {
+    background-color: #ccffcc;
+}
+
+.status_failed {
+    background-color: #ffcccc;
+}
+
+.breakpoint {
+    background-color: #cccccc;
+    border: 1px solid black;
+}
+</style><title>Test suite results</title></head>
+<body>
+<h1>Test suite results </h1>
+
+<table>
+<tr>
+<td>result:</td>
+<td>passed</td>
+</tr>
+<tr>
+<td>totalTime:</td>
+<td>17</td>
+</tr>
+<tr>
+<td>numTestTotal:</td>
+<td>4</td>
+</tr>
+<tr>
+<td>numTestPasses:</td>
+<td>4</td>
+</tr>
+<tr>
+<td>numTestFailures:</td>
+<td>0</td>
+</tr>
+<tr>
+<td>numCommandPasses:</td>
+<td>9</td>
+</tr>
+<tr>
+<td>numCommandFailures:</td>
+<td>0</td>
+</tr>
+<tr>
+<td>numCommandErrors:</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Selenium Version:</td>
+<td>2.48</td>
+</tr>
+<tr>
+<td>Selenium Revision:</td>
+<td>.0</td>
+</tr>
+<tr>
+<td>
+<table id="suiteTable" class="selenium" border="1" cellpadding="1" cellspacing="1"><tbody>
+<tr class="title status_passed"><td><b>Test Suite</b></td></tr>
+<tr class="  status_passed"><td><a href="#testresult0">Login</a></td></tr>
+<tr class="  status_passed"><td><a href="#testresult1">CreateCouponAndCheck</a></td></tr>
+<tr class="  status_passed"><td><a href="#testresult2">DeleteCreatedCoupon</a></td></tr>
+<tr class="  status_passed"><td><a href="#testresult3">Logout</a></td></tr>
+</tbody></table>
+
+
+</td>
+<td>&nbsp;</td>
+</tr>
+</table><table><tr>
+<td><a name="testresult0">Login.html</a><br/><div>
+<table border="1" cellpadding="1" cellspacing="1">
+<thead>
+<tr class="title status_passed"><td rowspan="1" colspan="3">Login</td></tr>
+</thead><tbody>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>open</td>
+	<td>/oc-panel/auth/login</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>store</td>
+	<td>demo@open-eshop.com</td>
+	<td>loginname</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>store</td>
+	<td>demo</td>
+	<td>password</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>//section[@id='page']//input[@name='email']</td>
+	<td>${loginname}</td>
+</tr>
+<!--?????»?? ???° ???µ???????µ?? ???????????µ ???????±???°, ?·???°?????? ???? ???¶?µ ?·?°?»???????????»??????)-->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>xpath=//section[@id='page']//input[@name="password"]</td>
+	<td>${password}</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>xpath=//section[@id='page']//input[@name='remember']</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>xpath=//section[@id='page']//button[@type='submit']</td>
+	<td></td>
+</tr>
+<!--???±???°?» clickAndWait -->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>waitForElementPresent</td>
+	<td>css=a.navbar-brand</td>
+	<td></td>
+</tr>
+<!--?????±?°?????» WaitForElementPresent-->
+<!--???±???°?» AssertText-->
+</tbody></table>
+
+
+</div></td>
+<td>&nbsp;</td>
+</tr><tr>
+<td><a name="testresult1">../CreateCouponAndCheck.html</a><br/><div>
+<table border="1" cellpadding="1" cellspacing="1">
+<thead>
+<tr class="title status_passed"><td rowspan="1" colspan="3">CreateCouponAndCheck</td></tr>
+</thead><tbody>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>open</td>
+	<td>/oc-panel</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>clickAt</td>
+	<td>css=h4.panel-title &gt; a</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>xpath=//span[.='Coupons']</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>waitForElementPresent</td>
+	<td>//div[@id='content']//input</td>
+	<td></td>
+</tr>
+<!--???°???µ?????» ClickAndWait ???° click ?? WaitForElementPresent-->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>//div[@id='content']/a</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>waitForElementPresent</td>
+	<td>//div[@id='crud-coupon']/h1</td>
+	<td></td>
+</tr>
+<!--???°???µ?????» ClickAndWait ???° click ?? WaitForElementPresent-->
+<!--?? WaitForElementPresent ???µ ?????°?» ?????????»???·?????°???? css-???»?????????? ????????????????-->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>id=formorm_name</td>
+	<td>waitForABcoupone</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>id=formorm_notes</td>
+	<td>Notes1</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>id=formorm_discount_amount</td>
+	<td>10</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>id=formorm_discount_percentage</td>
+	<td>1%</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>id=formorm_number_coupons</td>
+	<td>123</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=formorm[valid_date]</td>
+	<td>2016-06-05</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>xpath=//button[@name='formorm[submit]']</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>waitForElementPresent</td>
+	<td>css=h4.alert-heading</td>
+	<td>Success</td>
+</tr>
+<!--?????????µ??????, ?????? ?????µ ?·???°???µ?????? ???µ???µ???°?»?????? ???µ??????-->
+<tr class="  status_passed" style="cursor: pointer;">
+	<td>assertElementPresent</td>
+	<td>xpath=//td[.='waitForABcoupone']</td>
+	<td></td>
+</tr>
+<tr class="  status_passed" style="cursor: pointer;">
+	<td>assertElementPresent</td>
+	<td>xpath=//td[.='waitForABcoupone']/..//td[2][.='123']</td>
+	<td></td>
+</tr>
+<!--??????, ?? ???°?»?µ?µ, ?? ???±???°???°?????? ?????µ?????? ?? ?????µ???? ????????????, ??.??. ?? ?????????????°?????? ???° ?????????µ???? ???????µ ?????µ???????????µ???? xpath ?·?°?????????°, ???µ?? ???°?????? ?? ???????????±?µ?? ???°?????? ?????? ?·???°???µ??????, ???µ?·?°???????????? ???? ????????, ???°?????? id ?????»???????» ?????? ??????????-->
+<tr class="  status_passed" style="cursor: pointer;">
+	<td>assertElementPresent</td>
+	<td>xpath=//td[.='waitForABcoupone']/..//td[3][.='10.000']</td>
+	<td></td>
+</tr>
+<!--???°?? ?¶?µ ?? ???±???°???°?????? ?? ?????¶?????? ?????µ?????µ ?? ???°?±?»?????µ, ?????? ?????·?????»???µ?? ?????µ ???????»?????????? ????, ?????? ???°?????????µ?? "???????????°" ?·?°???????µ?????? ?? "?????»?????µ???????? ??????????????"-->
+<tr class="  status_passed" style="cursor: pointer;">
+	<td>assertElementPresent</td>
+	<td>xpath=//td[.='waitForABcoupone']/..//td[4][.='1.000']</td>
+	<td></td>
+</tr>
+<tr class="  status_passed" style="cursor: pointer;">
+	<td>assertElementPresent</td>
+	<td>xpath=//td[.='waitForABcoupone']/..//td[5][.='2016-06-05 00:00:00']</td>
+	<td></td>
+</tr>
+</tbody></table>
+
+
+</div></td>
+<td>&nbsp;</td>
+</tr><tr>
+<td><a name="testresult2">../DeleteCreatedCoupon.html</a><br/><div>
+<table border="1" cellpadding="1" cellspacing="1">
+<thead>
+<tr class="title status_passed"><td rowspan="1" colspan="3">DeleteCreatedCoupon</td></tr>
+</thead><tbody>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>open</td>
+	<td>/oc-panel/Coupon</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>//div[@id='content']//input</td>
+	<td>waitForABcoupone</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<!--?????????µ?????? ?????°???????????µ ?·???°???µ?????? ,???????±?? ?????°?»?????? ?????µ?????? ?????? ??????????-->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>waitForElementPresent</td>
+	<td>xpath=//td[.='waitForABcoupone']</td>
+	<td></td>
+</tr>
+<tr class="  status_passed" style="cursor: pointer;">
+	<td>assertElementPresent</td>
+	<td>xpath=//td[.='waitForABcoupone']/..//td[5][.='2016-06-05 00:00:00']</td>
+	<td></td>
+</tr>
+<!--???»?????°?? ???? ???????????µ, ???????????°?? ?????????? "??????"-->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>xpath=//td[.='waitForABcoupone']/..//a[@class='btn btn-danger index-delete']</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>waitForElementNotPresent</td>
+	<td>xpath=//td[.='waitForABcoupone']</td>
+	<td></td>
+</tr>
+<!--?????????µ?????? ?????? ???????????° ???µ??, Target ???·???» ???· ???µ?????° CreateCouponAndCheck-->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>waitForElementNotPresent</td>
+	<td>xpath=//td[.='waitForABcoupone']</td>
+	<td></td>
+</tr>
+</tbody></table>
+
+
+</div></td>
+<td>&nbsp;</td>
+</tr><tr>
+<td><a name="testresult3">../Logout.html</a><br/><div>
+<table border="1" cellpadding="1" cellspacing="1">
+<thead>
+<tr class="title status_passed"><td rowspan="1" colspan="3">Logout</td></tr>
+</thead><tbody>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>open</td>
+	<td>/oc-panel/Coupon</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>css=a.btn.dropdown-toggle</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>waitForElementPresent</td>
+	<td>//a[@href[contains(.,'/oc-panel/auth/logout')]]</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>clickAndWait</td>
+	<td>//a[@href[contains(.,'/oc-panel/auth/logout')]]</td>
+	<td></td>
+</tr>
+<!--???????°?????» clickAndWait, ?????? ???°?????? ???µ???µ?????????? ???° ?????????????? ???????°????????-->
+<tr class="  status_passed" style="cursor: pointer;">
+	<td>assertText</td>
+	<td>css=div.page-header &gt; h1</td>
+	<td>Login</td>
+</tr>
+<!--?????????µ?????? ?????? ?????»?? email ?? password ?????????? ??  ?? ?????? ???µ ???????°?»?????? ???°???????? ???± ?????µ???????????µ?? ?°???????????·?°??????-->
+<tr class="  status_passed" style="cursor: pointer;">
+	<td>assertValue</td>
+	<td>//section[@id='page']//input[@name='email']</td>
+	<td></td>
+</tr>
+<tr class="  status_passed" style="cursor: pointer;">
+	<td>assertValue</td>
+	<td>//section[@id='page']//input[@name='password']</td>
+	<td></td>
+</tr>
+</tbody></table>
+
+
+</div></td>
+<td>&nbsp;</td>
+</tr></table><pre>
+info: Starting test /selenium-server/tests/Login.html
+info: Executing: |open | /oc-panel/auth/login |  |
+info: Executing: |store | demo@open-eshop.com | loginname |
+info: Executing: |store | demo | password |
+info: Executing: |type | //section[@id=&apos;page&apos;]//input[@name=&apos;email&apos;] | ${loginname} |
+info: Executing: |type | xpath=//section[@id=&apos;page&apos;]//input[@name=&quot;password&quot;] | ${password} |
+info: Executing: |click | xpath=//section[@id=&apos;page&apos;]//input[@name=&apos;remember&apos;] |  |
+info: Executing: |click | xpath=//section[@id=&apos;page&apos;]//button[@type=&apos;submit&apos;] |  |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |waitForElementPresent | css=a.navbar-brand |  |
+info: Starting test /selenium-server/CreateCouponAndCheck.html
+info: Executing: |open | /oc-panel |  |
+info: Executing: |clickAt | css=h4.panel-title &gt; a |  |
+info: Executing: |click | xpath=//span[.=&apos;Coupons&apos;] |  |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |waitForElementPresent | //div[@id=&apos;content&apos;]//input |  |
+info: Executing: |click | //div[@id=&apos;content&apos;]/a |  |
+info: Executing: |waitForElementPresent | //div[@id=&apos;crud-coupon&apos;]/h1 |  |
+info: Executing: |type | id=formorm_name | waitForABcoupone |
+info: Executing: |type | id=formorm_notes | Notes1 |
+info: Executing: |type | id=formorm_discount_amount | 10 |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |type | id=formorm_discount_percentage | 1% |
+info: Executing: |type | id=formorm_number_coupons | 123 |
+info: Executing: |type | name=formorm[valid_date] | 2016-06-05 |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |click | xpath=//button[@name=&apos;formorm[submit]&apos;] |  |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |waitForElementPresent | css=h4.alert-heading | Success |
+info: Executing: |assertElementPresent | xpath=//td[.=&apos;waitForABcoupone&apos;] |  |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |assertElementPresent | xpath=//td[.=&apos;waitForABcoupone&apos;]/..//td[2][.=&apos;123&apos;] |  |
+info: Executing: |assertElementPresent | xpath=//td[.=&apos;waitForABcoupone&apos;]/..//td[3][.=&apos;10.000&apos;] |  |
+info: Executing: |assertElementPresent | xpath=//td[.=&apos;waitForABcoupone&apos;]/..//td[4][.=&apos;1.000&apos;] |  |
+info: Executing: |assertElementPresent | xpath=//td[.=&apos;waitForABcoupone&apos;]/..//td[5][.=&apos;2016-06-05 00:00:00&apos;] |  |
+info: Starting test /selenium-server/DeleteCreatedCoupon.html
+info: Executing: |open | /oc-panel/Coupon |  |
+info: Executing: |type | //div[@id=&apos;content&apos;]//input | waitForABcoupone |
+info: Executing: |click | //button[@type=&apos;submit&apos;] |  |
+info: Executing: |waitForElementPresent | xpath=//td[.=&apos;waitForABcoupone&apos;] |  |
+info: Executing: |assertElementPresent | xpath=//td[.=&apos;waitForABcoupone&apos;]/..//td[5][.=&apos;2016-06-05 00:00:00&apos;] |  |
+info: Executing: |click | xpath=//td[.=&apos;waitForABcoupone&apos;]/..//a[@class=&apos;btn btn-danger index-delete&apos;] |  |
+info: Executing: |waitForElementNotPresent | xpath=//td[.=&apos;waitForABcoupone&apos;] |  |
+info: Executing: |waitForElementNotPresent | xpath=//td[.=&apos;waitForABcoupone&apos;] |  |
+info: Starting test /selenium-server/Logout.html
+info: Executing: |open | /oc-panel/Coupon |  |
+info: Executing: |click | css=a.btn.dropdown-toggle |  |
+info: Executing: |waitForElementPresent | //a[@href[contains(.,&apos;/oc-panel/auth/logout&apos;)]] |  |
+info: Executing: |clickAndWait | //a[@href[contains(.,&apos;/oc-panel/auth/logout&apos;)]] |  |
+info: Executing: |assertText | css=div.page-header &gt; h1 | Login |
+info: Executing: |assertValue | //section[@id=&apos;page&apos;]//input[@name=&apos;email&apos;] |  |
+info: Executing: |assertValue | //section[@id=&apos;page&apos;]//input[@name=&apos;password&apos;] |  |
+</pre></body></html>

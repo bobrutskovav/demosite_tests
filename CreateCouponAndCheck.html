@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://demo.open-eshop.com/" />
+<title>CreateCouponAndCheck</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CreateCouponAndCheck</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/oc-panel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=h4.panel-title &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//span[.='Coupons']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='content']//input</td>
+	<td></td>
+</tr>
+<!--Заменил ClickAndWait на click и WaitForElementPresent-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='content']/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='crud-coupon']/h1</td>
+	<td></td>
+</tr>
+<!--Заменил ClickAndWait на click и WaitForElementPresent-->
+<!--в WaitForElementPresent не стал использовать css-слишком короткий-->
+<tr>
+	<td>type</td>
+	<td>id=formorm_name</td>
+	<td>waitForABcoupone</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=formorm_notes</td>
+	<td>Notes1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=formorm_discount_amount</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=formorm_discount_percentage</td>
+	<td>1%</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=formorm_number_coupons</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=formorm[valid_date]</td>
+	<td>2016-06-05</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//button[@name='formorm[submit]']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=h4.alert-heading</td>
+	<td>Success</td>
+</tr>
+<!--Проверяю, что все значения передались верно-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>xpath=//td[.='waitForABcoupone']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>xpath=//td[.='waitForABcoupone']/..//td[2][.='123']</td>
+	<td></td>
+</tr>
+<!--Тут, и далее, я обращаюсь именно к моему купону, т.к. я поднимаюсь на уровень выше предыдущего xpath запроса, тем самым я способен найти эти значения, независимо от того, какой id получил мой купон-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>xpath=//td[.='waitForABcoupone']/..//td[3][.='10.000']</td>
+	<td></td>
+</tr>
+<!--Так же я обращаюсь к нужной ячейке в таблице, что позволяет мне исключить то, что например "скидка" запишется в "Количество купонов"-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>xpath=//td[.='waitForABcoupone']/..//td[4][.='1.000']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>xpath=//td[.='waitForABcoupone']/..//td[5][.='2016-06-05 00:00:00']</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

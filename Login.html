@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://demo.open-eshop.com/" />
+<title>Login</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Login</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/oc-panel/auth/login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>demo@open-eshop.com</td>
+	<td>loginname</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>demo</td>
+	<td>password</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//section[@id='page']//input[@name='email']</td>
+	<td>${loginname}</td>
+</tr>
+<!--Если на верхней строке ошибка, значит мы уже залогинились)-->
+<tr>
+	<td>type</td>
+	<td>xpath=//section[@id='page']//input[@name=&quot;password&quot;]</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//section[@id='page']//input[@name='remember']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//section[@id='page']//button[@type='submit']</td>
+	<td></td>
+</tr>
+<!--убрал clickAndWait -->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=a.navbar-brand</td>
+	<td></td>
+</tr>
+<!--Добавил WaitForElementPresent-->
+<!--Убрал AssertText-->
+</tbody></table>
+</body>
+</html>
